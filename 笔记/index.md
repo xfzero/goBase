@@ -9,5 +9,6 @@
    fmt.Println(name) //0xc0000821e0
    ```
 
-2. 
+2. type关键字
+
 
