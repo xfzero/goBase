@@ -9,6 +9,8 @@
 
 3. 笔记文件和book文件夹对应
 
+4. code中的test文件夹为测试demo
+
 ##### github
 git@github.com:xfzero/goBase.git
 
