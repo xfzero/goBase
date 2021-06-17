@@ -24,6 +24,10 @@ func (this Student) ReturnAge() uint32 {
 	return this.Age
 }
 
+func (this *Student) getId() {
+	fmt.Println(this.Id)
+}
+
 func main() {
 	cbs := Student{Name:"tom",Age:18}
 
