@@ -1,29 +1,35 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	c := 'a'
-	fmt.Println(c) //97 字符类型是特殊的整形
-	fmt.Printf("%c\n",c) //a
+	filename := "./gm_config.xml"
+	file, err := os.Open(filename)
+	if err != nil {
+        fmt.Println("Open file Failed", err)
+        return
+    }
+    defer func() {
+        file.Close()
+        fmt.Println("file close1")
+    }()
+    //return
 
-	s := fmt.Sprintf("%c",c)
-	fmt.Println(s) //a
+    var b []byte = make([]byte, 4096)
+    n, err := file.Read(b)
+    if err != nil {
+        fmt.Println("Open file Failed", err)
+    }
+    data := string(b[:n])
 
-	arr := [...]int{1,2,4,5}
-	//arr := []int{1,2,4,5} //slice
-	for _,v := range arr {
-		fmt.Println(v)
-	}
-	fmt.Printf("%T\n",arr)
-
-	arr2 := [3][2]int{
-		{1,2},
-		{2,3},
-		{3,4}, //逗号必须加
-	}
-	for _,v := range arr2 {
-		fmt.Println(v)
-	}
-	
+    fmt.Println("222222")
+    defer func() {
+        file.Close()
+        fmt.Println("file close2")
+    }()
+    return
+    fmt.Println(data)
 }

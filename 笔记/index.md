@@ -38,4 +38,34 @@ fmt.Println(a, "除以", b, "的结果是 ", res)
 
 8. mod & dep
 
+9. Makefile
+
+10. struct
+golang非面向对象语言，可以使用struct实现弱面向对象的特性
+继承、重载、多态
+
+new对象：
+``go
+   //user.go
+   type User struct{
+      Name string
+   }
+   func newUser(id uint32, name string) *User {
+      return &User{
+         id: id,
+         name: name,
+      }
+   }
+``
+
+//继承
+type Animal strcut {
+   Color string
+}
+type Duck strcut {
+   Animal
+}
+
+11. defer,panic,recover
+三者一起使用可以充当其他语言中try…catch…的角色，而defer本身又像其他语言的析构函数
 

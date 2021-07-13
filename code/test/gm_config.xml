@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <log>
+        <config></config>
+    </log>
+    <http>:8008</http>
+    <grpc_port>8003</grpc_port>
+    <etcd>
+        <addr>10.42.0.35:2379,10.42.0.18:2379,10.42.0.19:2379:2379</addr>
+        <node>/game/ngame2/scene/</node>
+    </etcd>
+    <etcd1>
+    </etcd1>
+    <gmkey>ngame2nb2</gmkey>
+    <chan_size>64</chan_size>
+    <grpc_time_out>5</grpc_time_out>
+    <session_time_out>60</session_time_out>
+</config>
