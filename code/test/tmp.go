@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
+	aa := 12;bb := 13;
+	fmt.Println(aa,bb)
 	filename := "./gm_config.xml"
 	file, err := os.Open(filename)
 	if err != nil {
@@ -33,3 +35,4 @@ func main() {
     return
     fmt.Println(data)
 }
+
