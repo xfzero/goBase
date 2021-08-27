@@ -1,13 +1,20 @@
 1. 指针和指针变量
 
-   ```go
-   var name *string
-   var dog := "tony"
-   name = &dog
-   fmt.Println(dog) //tony
-   fmt.Println(&dog) //0xc0000821e0
-   fmt.Println(name) //0xc0000821e0
-   ```
+```go
+var name *string
+var dog := "tony"
+name = &dog
+fmt.Println(dog) //tony
+fmt.Println(&dog) //0xc0000821e0
+fmt.Println(name) //0xc0000821e0
+```
+
+new(T):创建一个变量T，初始值为零值，返回变量的指针
+```go
+p := new(int)
+fmt.Println(*p) //0 
+```
+
 
 2. type关键字
 
@@ -68,4 +75,6 @@ type Duck strcut {
 
 11. defer,panic,recover
 三者一起使用可以充当其他语言中try…catch…的角色，而defer本身又像其他语言的析构函数
+
+12. rune,byte,string
 
