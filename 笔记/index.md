@@ -78,3 +78,4 @@ type Duck strcut {
 
 12. rune,byte,string
 
+13. go run -race main.go

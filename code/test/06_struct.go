@@ -11,7 +11,7 @@ type People interface {
 
 type Student struct {
 	Name string
-	Age uint32
+	Age  uint32
 }
 
 // 定义结构体的一个方法。
@@ -29,7 +29,7 @@ func (this *Student) getId() {
 }
 
 func main() {
-	cbs := Student{Name:"tom",Age:18}
+	cbs := Student{Name: "tom", Age: 18}
 
 	var p People
 
